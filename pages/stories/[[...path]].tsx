@@ -51,10 +51,31 @@ export const getStaticProps = async (context) => {
   };
 };
 
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Datasets", href: "/dataset" },
+  { name: "Data Story", href: "/stories/case_1" },
+];
+
 export default function DatasetPage({ mdxSource, frontMatter }) {
   frontMatter = JSON.parse(frontMatter);
   return (
-    <main className="flex min-h-screen flex-col justify-between p-16 bg-zinc-900">
+    <main className="flex min-h-screen flex-col items-center p-24 bg-sky-100">
+    <header className="absolute inset-x-0 top-0 z-50">
+      <nav className="flex items-center p-6 lg:px-8" aria-label="Global">
+        <div className="flex flex-1 justify-center lg:gap-x-10">
+            {navigation.map((item) => (
+            <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-gray-900"
+            >
+                {item.name}
+            </a>
+            ))}
+        </div>
+      </nav>
+      </header>
       <div className="bg-white p-8 my-4 rounded-lg">
         <div className="prose mx-auto py-8">
           <header>
