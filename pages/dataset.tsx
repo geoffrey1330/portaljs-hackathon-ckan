@@ -50,6 +50,15 @@ import {
       <main className="flex min-h-screen flex-col items-center p-24 bg-sky-100">
         <header className="absolute inset-x-0 top-0 z-50">
           <nav className="flex items-center p-6 lg:px-8" aria-label="Global">
+            <div className="flex">
+              <a href="#" className="-m-1.5 p-1.5">
+                <img
+                    className="h-8 w-auto rounded-full"
+                    src="https://www.pngfind.com/pngs/m/444-4445036_png-file-random-icon-png-transparent-png.png"
+                    alt=""
+                />
+              </a>
+            </div>
             <div className="flex flex-1 justify-center lg:gap-x-10">
                 {navigation.map((item) => (
                 <a
